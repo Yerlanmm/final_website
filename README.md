@@ -31,3 +31,25 @@ Future Features
 🎥 Trailer playback integration.
 📊 Advanced movie statistics and recommendations.
 🛠️ Backend database for user data and reviews.
+
+
+
+Contributing
+Contributions are welcome! If you'd like to help improve the project, please:
+
+
+1.Fork the repository.
+
+2.Create a feature branch.
+
+git checkout -b feature-name  
+
+3.Commit your changes.
+
+git commit -m "Add feature-name"  
+
+4.Push to your branch and submit a pull request.
+
+
+
+
