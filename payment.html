@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Service Form</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+     <div class="nav-wrapper">
+          <div class="container">
+              <div class="nav">
+                  <a href="index.html" class="logo">
+                      SandyBay
+                  </a>
+                  <ul class="nav-menu" id="nav-menu">
+                      <li><a href="#hero-section">Home</a></li>
+                      <li class="dropdown"><a href="#">Genre</a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">Action</a></li>
+                              <li><a href="#">Drama</a></li>
+                              <li><a href="#">Comedy</a></li>
+                              <li><a href="#">History</a></li>
+                              <li><a href="#">Horror</a></li>
+                              <li><a href="#">Documentary</a></li>
+  
+  
+  
+                          </ul>
+                      
+                      
+                      </li>
+                      <li><a href="index.html">Movies</a></li>
+                      <li><a href="index.html">Series</a></li>
+                      <li><a href="index.html">Cartoons</a></li>
+                      <li><a href="index.html">About</a></li>
+  
+                     
+                  </ul>
+                  <button onclick="toggleDarkMode()" class="button-sign">Toggle Dark/Light Mode</button>
+                  <button onclick="showAuthModal('signUp')" class="button-sign" id="signUpBtn">Sign Up</button>
+                  <button onclick="showAuthModal('signIn')" class="button-sign" id="signInBtn">Sign In</button>
+                  <button onclick="logOut()" class="button-sign" id="exitBtn" style="display: none;">Exit</button>
+                  <span id="welcomeMessage" style="display: none; margin-left: 10px; font-weight: bold;"></span>
+  
+                  <div id="authModal">
+                      <div class="modal-content">
+                        <span class="close-button" onclick="closeAuthModal()">×</span>
+                        <h3 id="authTitle">Sign Up</h3>
+                        <input type="text" id="username" placeholder="Username" class="auth-input" required>
+                        <input type="password" id="password" placeholder="Password" class="auth-input" required>
+                        <button onclick="submitAuth()" class="button blue-button" id="authSubmitButton">Submit</button>
+                      </div>
+                    </div>
+  
+                  <div id="authModal">
+                      <div class="modal-content">
+                        <span class="close-button" onclick="closeAuthModal()">×</span>
+                        <h3 id="authTitle">Sign Up</h3>
+                        <input type="text" id="username" placeholder="Username" class="auth-input" required>
+                        <input type="password" id="password" placeholder="Password" class="auth-input" required>
+                        <button onclick="submitAuth()" class="button blue-button" id="authSubmitButton">Submit</button>
+                      </div>
+                    </div>
+   
+                  
+                  <div class="hamburger-menu" id="hamburger-menu">
+                      <div class="hamburger"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  <div class="payment-form-container">
+    <h2>Payment Service</h2>
+    <form id="paymentForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="name.doe@example.com" required>
+
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required maxlength="19">
+
+      <div class="card-details">
+        <div>
+          <label for="expiry">Expiry Date</label>
+          <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required maxlength="5">
+        </div>
+        <div>
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" placeholder="123" required maxlength="3">
+        </div>
+      </div>
+
+      <label for="amount">Payment Amount</label>
+      <input type="number" id="amount" name="amount" placeholder="100.00" required step="0.01">
+
+      <button type="submit" class="pay-button">Pay Now</button>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
